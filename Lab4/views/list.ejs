@@ -1,0 +1,24 @@
+<h1 class="display-4">Summaries</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% summaries.forEach(function(summary){ %>
+            <tr>
+                <td><%= summary.id %></td>
+                <td><%= summary.title %></td>
+                <td>
+                    <a href="/summaries/edit/<%= summary.id %>" class="btn btn-primary">Edit</a>
+                    <form class="d-inline" action="/summaries/delete/<%= summary.id %>" method="post">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

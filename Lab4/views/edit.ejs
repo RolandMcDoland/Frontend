@@ -1,0 +1,12 @@
+<h1 class="display-4">Edit Summary</h1>
+<form method="post" action="/summaries/update/<%= summary.id %>">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" class="form-control" value="<%= summary.title %>">
+    </div>
+    <div class="form-group">
+        <label for="body">Body</label>
+        <textarea name="body" class="form-control"><%= summary.body %></textarea>
+    </div>
+    <input type="submit" value="Save" class="btn btn-primary">
+</form>
